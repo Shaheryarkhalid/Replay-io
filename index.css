@@ -1,0 +1,952 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+/*.......................Header Styling.....................................................*/
+header.Top-Header{
+    background-color: #00231c;
+    height:100px;
+    width: 100%;
+    position: sticky;
+    top:0;
+    border-bottom: 0.5px solid #fff;
+    overflow: visible;
+    z-index: 3;
+}
+.Top-Header .Navigation{
+    display: flex;
+    align-items: center;
+    overflow: visible;
+}
+.Top-Header .Navigation .SVG-a{
+    position: relative;
+    margin:0 50px 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+.Top-Header .Navigation .SVG-a svg{
+    fill: #fff;
+    height: 100px;
+    max-width: 200px;
+}   
+.Top-Header .Navigation ul{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    width: 100%;
+}
+.Top-Header .Navigation ul a{
+    text-decoration: none;
+    color:#fff;
+    padding: 20px;
+}
+.Top-Header .Navigation ul a li{
+    list-style: none;
+    font-weight: 500;
+}
+
+/*.................Hamburger Menu...........................*/
+.Hamburger-Checkbox{
+    position: absolute;
+    opacity: 0;
+}
+.Hamburger-list{
+    position: fixed;
+    top: -300px;
+    z-index: 100;
+    width: 100%;
+    display: block;
+    background-color: #00231c;
+    visibility: hidden;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+.Hamburger-Checkbox:checked ~ .Hamburger-list{
+    visibility: visible;
+    top:100px;
+    transition: top 0.5s ease;
+}   
+.Hamburger-list a{
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #777;
+    user-select: none;
+    transition: all 0.5s linear;
+}
+.Hamburger-list a svg{
+    height:20px;
+    fill: #fff;
+}
+.Hamburger-list li{
+    list-style: none;
+}
+.Top-Header .Navigation .Hamburger-Menu{
+    display: none;
+    transition: all 0.5s linear;
+}
+.Top-Header .Navigation .Hamburger-Menu .Hamburger{
+    position: relative;
+    height: 45px;
+}
+.Top-Header .Navigation .Hamburger-Menu .Hamburger span{
+    position: relative;
+    display: block;
+    height: 4px;
+    width: 50px;
+    background-color: #fff;
+    border-radius: 60px;
+}
+.Top-Header .Navigation .Hamburger-Menu .Hamburger span:nth-child(2){
+    top:15px;
+    width: 40px;
+}
+.Top-Header .Navigation .Hamburger-Menu .Hamburger span:nth-child(3){
+    top:30px;
+    width: 30px;
+}
+@media screen and (max-width:740px){
+    .Top-Header .Navigation{
+        justify-content: space-between;
+    }
+    .Top-Header .Navigation> ul{
+        display: none;
+    }
+    .Top-Header .Navigation .Hamburger-Menu{
+        display: flex;
+        margin-right: 20px;
+        transition: all 0.5s linear;
+    }
+    @media screen and (max-width:350px){
+        
+        .Top-Header .Navigation .SVG-a{
+            margin:0 20px 0 20px;
+
+        }
+        .Top-Header .Navigation .SVG-a svg{
+            max-height: 100px;
+            max-width: 100px;
+        }
+
+    }
+}
+/*.......................Close  Header Style....................................*/
+/*.......................Section 1...............................................*/
+.Section-1{
+    position: relative;
+    height: calc(100vh - 120px);
+    width: 100%;
+    background-color: #00231c;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.Section-1 .Sectoion-1-Poster{
+    max-width:calc(50% - 100px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Section-1 .Sectoion-1-Poster video{
+    max-width: 100%;
+    max-height: 400px;
+}
+
+.Section-1 .Section-1-Heading{
+    max-width: calc(50% - 100px);
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.Section-1 .Section-1-Heading span{
+    display: block;
+    color:#fff;
+    font-size: clamp(1rem, 10vw,3rem);
+    max-width:300px;
+}
+@media screen and (max-height:870px){
+    .Section-1 .Sectoion-1-Poster{
+        max-width: 100%;
+    }
+    .Section-1 video{
+        max-height: 200px;
+    }
+    
+}
+@media screen and (max-width:740px){
+    
+    .Section-1{
+        display: flex;
+        flex-direction: column;
+    } 
+    .Section-1 .Sectoion-1-Poster{
+        width: 100%;
+    }
+    .Section-1 video{
+        max-width: 100%;
+    }
+    .Section-1 .Section-1-Heading{
+        align-self:center;
+        display: inline-block;
+        width: 100%;
+    }
+    .Section-1 .Section-1-Heading span{
+        font-size: clamp(1.7rem, 0.8889rem + 0.8889vw, 2rem);
+        display: inline;
+        
+    }
+    @media screen and (max-width:420px){
+         .Section-1 video{
+            height: 350%;
+
+         }
+    }
+}
+/*......................Section 2...................................*/
+section.Section-2{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #fff5ec;
+    position: relative;
+    top:-20px;
+    border-radius: 20px 20px 0  0  ;
+    padding: 20px 40px;
+}
+.Section-2 .Content-Holder{
+    display: flex;
+    flex-direction: column;
+}
+.Section-2 .Content-Holder .top-section{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px 20px 5px;
+    border-bottom: 1px solid #000;
+}
+.Section-2 .Content-Holder .top-section h1{
+    font-size: clamp(1rem,10vw,2rem);
+    font-weight: 200;
+}
+.Section-2 .Content-Holder .bottom-section{
+    display: flex;
+    flex: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding:40px 0 40px 0;
+
+}
+.Section-2 .Content-Holder .bottom-section .left-sec{
+    width: 35%;
+}
+.Section-2 .Content-Holder .bottom-section .left-sec-div img{
+    display: none;
+}
+.Section-2 .Content-Holder .bottom-section .left-sec .heading h1{
+    font-size: clamp(2rem, 0.6667rem + 2.6667vw, 4rem);
+    padding:50px 0 20px 0;
+}
+.Section-2 .Content-Holder .bottom-section .left-sec .heading span{
+    font-size: 1.5rem;
+}
+.Section-2 .Content-Holder .bottom-section .left-sec .applications{
+    padding-bottom: 50px;
+    margin-top: 100px;
+    
+}
+.Section-2 .Content-Holder .bottom-section .left-sec .applications ul li{
+    list-style: circle;
+    list-style-position: inside;
+    font-size: clamp(1rem, 0.9778rem + 0.1778vw, 1.2rem);
+    font-weight: 800;
+    padding:10px 0;
+}
+.Section-2 .Content-Holder .bottom-section .left-sec .call-to-action{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding:50px 50px 50px 0 ;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+.Section-2 .Content-Holder .bottom-section .left-sec .call-to-action button{
+    height: 60px;
+    border-radius: 10px;
+    background-color: #ff805c;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-size: clamp(0.5rem,5vw,1.1rem);
+}
+.Section-2 .Content-Holder .bottom-section .left-sec .call-to-action button svg{
+    height: 30px;
+}
+.Section-2 .Content-Holder .bottom-section .right-sec img{
+    max-height: 600px;
+}
+@media screen and (max-width:1000px) {
+    .Section-2 .Content-Holder .bottom-section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .Section-2 .Content-Holder .bottom-section .left-sec{
+        width: 100%;
+    }
+    .Section-2 .Content-Holder .bottom-section .left-sec .left-sec-div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .Section-2 .Content-Holder .bottom-section .left-sec .left-sec-div img{
+        max-width: 300px;
+        max-height: 300px;
+        display: block;
+    }
+    .Section-2 .Content-Holder .bottom-section .left-sec .left-sec-div .left-sec-s2 img{
+        max-width: 400px;
+        max-height: 400px;
+    }
+    .Section-2 .Content-Holder .bottom-section .right-sec img{
+        padding-top: 40px;
+        max-width: 100%;
+    }
+    
+    @media screen and (max-width:750px) {
+        .Section-2 .Content-Holder .bottom-section .left-sec .left-sec-div  img{
+            max-width:200px;
+            max-height: 200px;
+            
+        }
+        .Section-2 .Content-Holder .bottom-section .left-sec .applications ul li{
+            list-style-position: outside;
+        }
+        @media screen and (max-width:550px) {
+            .Section-2 .Content-Holder .bottom-section .left-sec .left-sec-div  img{
+                display: none;
+                
+            }
+            .Section-2 .Content-Holder .bottom-section .left-sec .heading h1{
+                padding-bottom: 0;
+                padding-top: 0;
+            }
+            .Section-2 .Content-Holder .bottom-section .left-sec .applications{
+                margin-top: 20px;
+            }
+
+        }
+    }   
+}
+/*..........................Section 3...................................*/
+section.Section-3{
+    position: relative;
+    top:-20px;
+    min-height:100vh;
+    width: 100%;
+    background-color: #00231c;
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(./Related-Media/Section-3-background.jpg);
+    background-repeat: repeat;
+    background-size: 960px 540px;
+}
+.Section-3 .heading{
+    padding-bottom:20px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#fff;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #fff;
+}
+.Section-3 .Content-Section{
+    height:100%;
+    padding:40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Section-3 .Content-Section .left{
+    align-self: center;
+}
+.Section-3 .Content-Section .left img{
+    max-width: 400px;
+    max-height: 400px;
+}
+.Section-3 .Content-Section .right{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    color:#fff;
+}
+.Section-3 .Content-Section .right h1{
+    font-size: clamp(1rem , 10vw ,4rem);
+    padding-bottom: 20px;
+}
+.Section-3 .Content-Section .right span{
+    font-size: 1.2rem;
+}
+.Section-3 .Content-Section .right .Points{
+    position: relative;
+    margin-top: 50px;
+    width: 100%;
+}
+.Section-3 .Content-Section .right .Points .Point-1, .Section-3 .Content-Section .right .Points .Point-2{
+    position: absolute;
+    opacity: 0;
+}
+.Section-3 .Content-Section .right .Points .Points-Handler{
+    padding-bottom: 10px;
+    padding-right:clamp(50px, 7vw , 100px);
+    border-bottom: 2px solid;
+    font-size: 1.2rem;
+    position: relative;
+    cursor: pointer;
+}
+.Section-3 .Content-Section .right .Points .Points-Handler-p2{
+    left:-10px;
+}
+.Section-3 .Content-Section .right .Points .Points-Content{
+    position: absolute;
+    padding-left: 20px;
+    padding-top: 30px;
+    top:50px;
+    font-size: clamp(1rem, 4vw,1.3rem);
+    font-weight: 800;
+    opacity: 0;
+    line-height: 1.6;
+    
+}
+.Section-3 .Content-Section .right .Points .Points-Content li{
+    list-style-type: circle;
+}
+.Section-3 .Content-Section .right .Points .Point-1:checked ~ .Points-Handler-p1{
+    color:#ff805c;
+}
+.Section-3 .Content-Section .right .Points .Point-2:checked ~ .Points-Handler-p2{
+    color:#ff805c;
+}
+.Section-3 .Content-Section .right .Points .Point-1:checked ~ .Point-1-Content{
+    opacity: 1;
+    transition: all 0.5s linear;
+}
+.Section-3 .Content-Section .right .Points .Point-2:checked ~ .Point-2-Content{
+    opacity: 1;
+    transition: all 0.5s linear;
+}
+.Section-3 .Content-Section .right .Call-to-action{
+    margin-top: 350px;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+}
+.Section-3 .Content-Section .right .Call-to-action button{
+    margin: 30px;
+    padding:15px 20px ;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    border: 1px solid #ff805c;
+    color: #ff805c;
+    font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+    border-radius: 10px;
+}
+.Section-3 .Content-Section .right .Call-to-action button svg{
+    height: 20px;
+    fill: #ff805c;
+}
+@media screen and (max-width:1000px) {
+    .Section-3 .Content-Section {
+        padding: 20px;
+        flex-direction: column;
+    }
+    .Section-3 .Content-Section .left{
+        max-width: 100%;
+        padding-bottom: 40px;
+    }
+    .Section-3 .Content-Section .left img{
+        max-width: 100%;
+    }
+    .Section-3 .Content-Section .right{
+        width:100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .Section-3 .Content-Section .right span{
+        text-align: left;
+        align-self: flex-start;
+    }
+    .Section-3 .Content-Section .right .Points .Points-Handler{
+        padding-right:200px;
+    }
+    @media screen and (max-width:720px) {
+        .Section-3 .Content-Section .right .Points .Points-Handler{
+            padding-right:10vw;
+        }
+        @media screen and (max-width:395px){
+            .Section-3 .Content-Section{
+                padding: 20px 0 0 0;
+            }
+            .Section-3 .Content-Section .right .Points .Points-Handler{
+                display: block;
+                left: 0;
+                margin-top: 20px;
+            }
+            .Section-3 .Content-Section .right .Points .Points-Content{
+                top:120px;
+            }.Section-3 .Content-Section .right .Call-to-action{
+                margin-top: 380px;
+            }
+        }
+    }
+}
+/*................Section 4.........................................*/
+section.Section-4{
+    position: relative;
+    top:-20px;
+    min-height:80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding:20px 50px;
+    background-color: #fff6ed;
+    border-radius: 20px 20px 0 0;
+}
+.Section-4 .Top-Section{
+    padding-bottom: 20px;
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+    font-size: clamp(1rem, 10vw,1.1rem);
+}
+.Section-4 .Bottom-Section{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Section-4 .Bottom-Section .left-section{
+    width:40%;   
+}
+.Section-4 .Bottom-Section .left-section h1{
+    padding-top: 60px;
+    font-size: clamp(1rem,15vw,4rem);
+    padding-bottom: 30px;
+}
+.Section-4 .Bottom-Section .left-section span{
+    font-weight: 600;
+    font-size: clamp(0.3rem,3vw,1rem);
+}
+.Section-4 .Bottom-Section .left-section ul{
+    margin-top: 100px;
+    font-size: clamp(1rem, 13vw,1.3rem) ;
+    font-weight: 600;
+    padding-left: 20px;
+}
+.Section-4 .Bottom-Section .left-section ul li{
+    list-style-type: circle;
+    line-height: 1.5;
+}
+
+.Section-4 .Bottom-Section img{
+    margin-top:100px;
+    max-height:45vw;
+    max-width: 45vw;
+}
+@media screen and (max-width:750px){
+
+    .Section-4 .Bottom-Section{
+        flex-direction: column;
+    }
+    .Section-4 .Bottom-Section .left-section{
+       
+        width: 100%;
+    }
+    .Section-4 .Bottom-Section .left-section h1{
+        padding-top: 30px;
+    }
+}
+/*......................Section 5..............................*/
+section.Section-5{
+    position: relative;
+    top:-20px;
+    min-height:100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding:30px;
+    background-color: #fff6ed;
+    border-radius: 20px;
+    background-color: #00231c;
+    background-image: url("./Related-Media/Section-3-background.jpg");
+    background-size: 900px;
+}
+.Section-5 .Top-Section{
+    padding-bottom: 20px;
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+    font-size: clamp(1rem, 10vw,1.1rem);
+    color:#fff
+}
+.Section-5 .Bottom-Section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    padding:100px 0;
+}
+.Section-5 .Bottom-Section img{
+    width: 400px;
+    height: 100%;
+    align-self: center;
+}
+.Section-5 .Bottom-Section .right-section{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color:#fff;
+}
+.Section-5 .Bottom-Section .right-section h1{
+    font-size: clamp(1rem,15vw,4rem);
+}
+.Section-5 .Bottom-Section .right-section span{
+    padding-top: 20px;
+}
+.Section-5 .Bottom-Section .right-section ul{
+    margin-top: 100px;
+    font-size: clamp(1rem, 13vw,1.3rem) ;
+    font-weight: 600;
+    line-height: 1.5;
+}
+@media screen and (max-width:850px) {
+    .Section-5 .Bottom-Section{
+        flex-direction: column;
+        padding:20px;
+    }
+    .Section-5 .Bottom-Section .right-section{
+        width: 100%;
+    }
+    .Section-5 .Bottom-Section img{
+        max-width: 100%;
+    }
+    .Section-5 .Bottom-Section .right-section ul li{
+        padding-bottom: 20px;
+    }
+    .Section-5 .Bottom-Section .right-section h1{
+        padding-top: 50px;
+    }
+}
+/*......................Section 6.................................*/
+section.Section-6{
+    width: 100%;
+    padding: 50px 50px 0 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff4ec;
+}
+.Section-6 .Content-Holder{
+    width:80%;
+    padding: 30px 0 ;
+}
+.Section-6 .Content-Holder span{
+    font-size: clamp(1rem,10vw,1.5rem);
+    font-weight: 600;
+}
+.Section-6 .Content-Holder h1{
+    padding-top: 30px;
+    font-size: clamp(1rem,5vw,4rem);
+    line-height: 1.4;
+}
+.Section-6 .Content-Holder .Call-to-action{
+    width:50%;
+    margin-top: 50px;
+    padding:30px 0;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+}
+.Section-6 .Content-Holder .Call-to-action button{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: clamp(0.4rem,4vw,1rem);
+    border: 1px solid #000;
+    background-color: #ff805c;
+    border-radius: 5px;
+    font-weight: 800;
+    cursor: pointer;
+}
+.Section-6 .Content-Holder .Call-to-action button svg{
+    max-height: 20px;
+}
+/*....................Section 7.....................................*/
+section.Section-7{
+    min-height: 50vh;
+    width:100%;
+    padding:50px 70px;
+    background-color: #00231c;
+    background-image: url(./Related-Media/Section-3-background.jpg);
+    background-size: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.Section-7 .Top-Section{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.Section-7 .Top-Section h1{
+    font-size: 3rem;
+    color:#fff;
+}
+.Section-7 .Top-Section button{
+    width:50%;
+    background-color: transparent;
+    font-size: clamp(1rem,5vw,1.1rem);
+    border: 1px solid #ff805c;
+    color: #ff805c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+}
+.Section-7 .Top-Section button svg{
+    height: 20px;
+    fill: #ff805c;
+}
+.Section-7 .Bottom-Section{
+    width:100%;
+    padding:70px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.Section-7 .Bottom-Section .News{
+    width:20%;
+    margin-top: 40px;
+}
+.Section-7 .Bottom-Section .News .Border{
+    border-top: 1px solid #fff;
+    width: 60%;
+}
+.Section-7 .Bottom-Section .News a{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color:#fff;
+}
+.Section-7 .Bottom-Section .News a p{
+    font-size: clamp(0.5rem,4vw,1.2rem);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+.Section-7 .Bottom-Section .News a span{
+    font-size: clamp(0.5rem,4vw,1.2rem);
+    margin-top: 5px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.Section-7 .Bottom-Section .News a .Read-More{
+    color: #ff805c;
+    font-weight:100;
+    font-family: Poppins,sans-serif;
+}
+@media screen and (max-width:800px) {
+    .Section-7 .Top-Section{
+        flex-direction: column;
+    }
+    .Section-7 .Top-Section button{
+        width:100%;
+        margin:30px 0;
+    }
+    .Section-7 .Bottom-Section{
+        width:100%;
+        flex-direction: column;
+        padding:10px 0;
+    }
+    .Section-7 .Bottom-Section .News{
+        width: 100%;
+    }
+}
+/*..................Section 8.....................................*/
+section.Section-8{
+    padding: 50px;
+    min-height: 90vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #fef5ec;
+}
+.Section-8 video{
+    max-width: 60%;
+    max-height: 1000px;
+    border-radius: 20px;
+}
+.Section-8 .Right-Section{
+    width:35%
+}
+.Section-8 .Right-Section span{
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+.Section-8 .Right-Section h1{
+    margin-top: 50px;
+    font-size: clamp(1rem,10vw,2rem);
+}
+.Section-8 .Right-Section .Call-to-action{
+    width:90%;
+    margin-top: 50px;
+    height: 150px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    display: flex;
+    align-items: center;
+}
+.Section-8 .Right-Section .Call-to-action button{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ff805c;
+    border-radius: 10px;
+    font-size: clamp(0.5rem,5vw,1.1rem);
+    font-weight: 800;
+    cursor: pointer;
+}
+.Section-8 .Right-Section .Call-to-action button svg{
+    height: 20px;
+}
+@media screen and (max-width:800px) {
+    section.Section-8{
+        flex-direction: column;
+    }
+    section.Section-8 video{
+        max-width: 100%;
+    }
+    section.Section-8 .Right-Section{
+        margin-top: 40px;
+        width:100%;
+    }
+}
+/*......................Footer...................../////////*/
+footer.Footer{
+    min-height:80vh;
+    width: 100%;
+    padding:40px;
+    border-top: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fef5ec;
+
+}
+.Footer svg{
+    max-width:35%;
+    max-height: 50vh;
+}
+.Footer .Left-Section{
+    width:50%;
+    padding:40px;
+}
+.Footer .Left-Section .Copyright{
+    display: flex;
+    padding-top: 50px;
+    padding-left: 25px;
+    font-size: clamp(0.3rem,3vw,0.8rem);
+    font-weight: 800;
+}
+.Footer .Left-Section .Copyright li{
+    margin-left: 30px;
+}
+.Footer .Left-Section .Copyright a{
+    text-decoration: none;
+    color:#000;
+    
+}
+.Footer .Left-Section .Links{
+    display: flex;
+    justify-content: space-evenly;
+}
+.Footer .Left-Section .Links .inter-Links{
+    width:40%;
+}
+.Footer .Left-Section .Links .inter-Links h1{
+    font-size: clamp(1rem,5vw,1.5rem);
+    margin-bottom: 20px;
+}
+.Footer .Left-Section .Links .inter-Links ul li{
+    list-style: none;
+    padding:5px 0;
+    font-size:clamp(1rem,5vw,1.1rem);
+    font-weight: 900;
+}
+.Footer .Left-Section .Links .inter-Links ul li a{
+    text-decoration: none;
+    color:#000;
+}
+@media screen and (max-width:750px) {
+    footer.Footer{
+        flex-direction: column;
+        padding:20px;
+    }
+    footer.Footer svg{
+        max-width: 100%;
+        max-height: 200px;
+    }
+    footer.Footer .Left-Section {
+        padding: 0;
+        padding-top:40px;
+        width: 100%;
+    }
+    @media screen and (max-width:310px) {
+        footer.Footer .Left-Section .Links{
+            flex-direction: column;
+            align-items: center;
+        }
+        footer.Footer .Left-Section .Links .inter-Links{
+            padding-top: 40px;
+            width: 80%;
+        }
+        footer.Footer .Left-Section .Links .inter-Links h1{
+            font-weight: 900;
+        }
+
+    }
+}
